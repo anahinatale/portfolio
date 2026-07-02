@@ -1,0 +1,474 @@
+/* --- PALETA DE COLORES EXTRAÍDA DE LA IMAGEN image_887eff.png --- */
+:root {
+    --bg-main: #ffffff;            /* Fondo puro para las secciones limpias */
+    --bg-alt: #D9F9DF;             /* Verde menta pastel para romper secciones de forma suave */
+    --text-main: #1e293b;          /* Slate oscuro para máxima legibilidad */
+    --text-muted: #475569;         /* Gris medio para descripciones */
+    --text-light: #64748b;         /* Gris suave para detalles y fechas */
+    
+    /* Tonos principales de la paleta */
+    --palette-lavender-dark: #9FA1FF;  /* Lavanda base (para el Hero) */
+    --palette-lavender-light: #B5BAFF; /* Lavanda claro */
+    --palette-cyan: #AEE2FF;           /* Celeste pastel para acentos y badges */
+    
+    --border: #e2e8f0;             
+    --max-width: 1100px;
+}
+
+/* --- ESTILOS BASE --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- NAVBAR SUPERIOR FIJA --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-main);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: 2rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--palette-lavender-dark);
+}
+
+/* --- SECCIONES FLUIDAS --- */
+.seccion-bloque {
+    padding: 7rem 2rem;
+}
+
+.bg-alterno {
+    background-color: var(--bg-alt); /* Aplica el verde menta suave de la paleta */
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.bloque-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.titulo-seccion {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    color: var(--text-main);
+}
+
+.subtitulo-seccion {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-top: -1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* --- HERO SECTION MODIFICADA (Fondo Lavanda #9FA1FF) --- */
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 7rem 2rem 4rem 2rem;
+    background-color: var(--palette-lavender-dark); /* Color de fondo modificado */
+    position: relative;
+}
+
+.hero-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-greeting {
+    color: #ffffff; /* Contraste blanco sobre el lavanda */
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.hero-texto h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.hero-texto h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: rgba(30, 41, 59, 0.8);
+    margin-bottom: 1.5rem;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+}
+
+/* Botones en el Hero */
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--text-main);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #000000;
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--text-main);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Foto de perfil */
+.hero-imagen-wrapper {
+    position: relative;
+    justify-self: center;
+    width: 280px;
+    height: 280px;
+}
+
+.hero-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--palette-lavender-light);
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+    z-index: 2;
+    position: relative;
+}
+
+.hero-foto-fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--palette-lavender-light);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: #fff;
+    z-index: 1;
+}
+
+/* --- SOBRE MÍ & GRID --- */
+.grid-about {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+}
+
+.about-info p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.skills-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skill-item-badge {
+    background-color: #fff;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.skill-item-badge:hover {
+    border-color: var(--palette-lavender-dark);
+    color: var(--text-main);
+    background-color: var(--palette-lavender-light);
+}
+
+/* PROYECTOS */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.proyecto-card {
+    background-color: var(--bg-main);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.proyecto-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--palette-lavender-dark);
+    box-shadow: 0 12px 20px -8px rgba(159,161,255,0.2);
+}
+
+.proyecto-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.75rem;
+}
+
+.proyecto-card p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.card-tags-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-main);
+    background-color: var(--palette-cyan); 
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+}
+
+.card-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.card-link i {
+    transition: transform 0.2s ease;
+}
+
+.card-link:hover i {
+    transform: translateX(3px);
+    color: var(--palette-lavender-dark);
+}
+
+.card-link-disabled {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* TIMELINES  */
+.grid-timeline {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+}
+
+.timeline-wrapper {
+    border-left: 2px solid var(--palette-lavender-light);
+    padding-left: 1.5rem;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: calc(-1.5rem - 7px);
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid var(--palette-lavender-dark);
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-light);
+    text-transform: uppercase;
+}
+
+.timeline-item h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+.timeline-item h5 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-main);
+    margin-bottom: 0.75rem;
+}
+
+.timeline-tasks li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 0.8rem;
+    list-style: none;
+}
+
+.timeline-tasks li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: var(--palette-lavender-dark);
+}
+
+/*  CONTACTO  */
+.footer-section {
+    background-color: #fff;
+    padding: 5rem 2rem 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.footer-container h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.footer-container p {
+    color: var(--text-muted);
+    max-width: 500px;
+    margin: 0 auto 2rem auto;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.footer-socials a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.footer-socials a:hover {
+    color: var(--palette-lavender-dark);
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .hero-container, .grid-about, .grid-timeline {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .hero-imagen-wrapper {
+        order: -1;
+    }
+    .hero-texto h1 {
+        font-size: 2.5rem;
+    }
+    .nav-links {
+        display: none;
+    }
+}

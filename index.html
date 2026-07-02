@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anahí Natale | Data Engineering & Analytics Portfolio</title>
+    <!-- Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">AN.</a>
+            <div class="nav-links">
+                <a href="#sobre-mi">Sobre Mí</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#experiencia">Trayectoria</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+        <div class="hero-container">
+            <div class="hero-texto">
+                <p class="hero-greeting">Hola, mi nombre es</p>
+                <h1>Anahí Natale</h1>
+                <h2>Data Engineering & Analytics</h2>
+                <p class="hero-desc">
+                    Programadora especializada en ingeniería de datos, optimización de pipelines ETL, migraciones masivas y control de integridad analítica sobre grandes volúmenes de información.
+                </p>
+                <div class="hero-cta">
+                    <a href="#proyectos" class="btn-primary">Ver Proyectos</a>
+                    <a href="#contacto" class="btn-secondary">Contactame</a>
+                </div>
+            </div>
+            <div class="hero-imagen-wrapper">
+                <img src="assets/perfil.png" alt="Anahí Natale" class="hero-foto" onerror="this.style.display='none';">
+                <div class="hero-foto-fallback"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section id="sobre-mi" class="seccion-bloque">
+        <div class="bloque-container">
+            <div class="grid-about">
+                <div class="about-info">
+                    <h3 class="titulo-seccion">Sobre Mí</h3>
+                    <p>Durante más de 3 años trabajé en entornos críticos de software para aseguradoras y brokers, participando en procesos masivos de migración, consistencia y validación de datos transaccionales.</p>
+                    <p>Hoy combino mi base técnica con una sólida formación en Ciencia de Datos e Inteligencia Artificial para resolver dilemas financieros y operativos mediante el modelado y la analítica avanzada de negocios.</p>
+                </div>
+                <div class="about-skills">
+                    <h3 class="titulo-seccion">Core Stack</h3>
+                    <div id="contenedor-skills" class="skills-flex">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PROYECTOS -->
+    <section id="proyectos" class="seccion-bloque bg-alterno">
+        <div class="bloque-container">
+            <h3 class="titulo-seccion">Proyectos Destacados</h3>
+            <p class="subtitulo-seccion">Soluciones de ingeniería, análisis predictivo y modelado matemático aplicado.</p>
+            <div id="contenedor-proyectos" class="proyectos-grid">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN EXPERIENCIA LABORAL / EDUCACIÓN -->
+    <section id="experiencia" class="seccion-bloque">
+        <div class="bloque-container grid-timeline">
+            <div>
+                <h3 class="titulo-seccion">Experiencia</h3>
+                <div id="contenedor-experiencia" class="timeline-wrapper">
+                </div>
+            </div>
+            <div>
+                <h3 class="titulo-seccion">Formación</h3>
+                <div id="contenedor-educacion" class="timeline-wrapper">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <footer id="contacto" class="footer-section">
+        <div class="footer-container">
+            <h3>¿Hablamos?</h3>
+            <p>Estoy abierta a oportunidades como Data Engineer, Analista de Datos o proyectos de consultoría a medida.</p>
+            <div id="enlaces-contacto" class="footer-socials">
+            </div>
+            <p class="copyright">&copy; 2026 · Diseñado y Desarrollado por Anahí Natale</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
